@@ -29,6 +29,7 @@ sudo apt install xclip -y
 git config --global init.defaultBranch main
 git config --global user.email isaac.pang91@gmail.com
 git config --global user.name "Isaac Pang"
+# check with git config --global -l
 ## --------------------------------------------------
 
 ## --------------------------------------------------
