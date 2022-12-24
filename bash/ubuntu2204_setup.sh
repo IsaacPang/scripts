@@ -87,4 +87,7 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 
 # snap package install
 snap install chezmoi --classic
+
+# setup on a new machine
+chezmoi init --apply https://github.com/IsaacPang/dotfiles.git
 ## --------------------------------------------------
