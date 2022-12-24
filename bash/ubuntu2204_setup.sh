@@ -11,7 +11,7 @@ sudo apt upgrade -y
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install QOL packages
+## QOL packages
 ## --------------------------------------------------
 # common software properties
 sudo apt install software-properties-common -y
@@ -24,7 +24,7 @@ sudo apt install xclip -y
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## setup git
+## git
 ## --------------------------------------------------
 git config --global init.defaultBranch main
 git config --global user.email isaac.pang91@gmail.com
@@ -42,25 +42,24 @@ echo "dconf write /org/gnome/desktop/input-sources/xkb-options \"['caps:swapesca
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install neovim
+## neovim
 ## --------------------------------------------------
-# neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install neovim python3-dev python3-pip -y
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install touchpad-indicator
+## touchpad-indicator
 ## --------------------------------------------------
-# touchpad indicator - manual step required for autostart
+# manual step required for autostart
 sudo add-apt-repository ppa:atareao/atareao -y
 sudo apt update
 sudo apt install touchpad-indicator -y
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install kitty
+## kitty
 ## --------------------------------------------------
 # binaries
 # curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
@@ -74,7 +73,13 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install chezmoi and run
+## oh-my-zsh
+## ------------------------------------------------
+#
+## ------------------------------------------------
+
+## --------------------------------------------------
+## chezmoi and run
 ## ------------------------------------------------
 # binary install
 # sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
