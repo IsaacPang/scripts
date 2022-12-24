@@ -1,4 +1,4 @@
-# Bash Scripts
+# Scripts
 
 Scripts folder for various systems
 
