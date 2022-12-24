@@ -38,6 +38,7 @@ git config --global user.name "Isaac Pang"
 sudo apt install dconf-cli -y
 
 # add config to swap esc and caps
+# TODO: move to chezmoi
 echo "dconf write /org/gnome/desktop/input-sources/xkb-options \"['caps:swapescape']\"" >> ~/.bashrc
 ## --------------------------------------------------
 
@@ -73,13 +74,13 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## oh-my-zsh
+## oh-my-bash
 ## ------------------------------------------------
-#
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 ## ------------------------------------------------
 
 ## --------------------------------------------------
-## chezmoi and run
+## chezmoi
 ## ------------------------------------------------
 # binary install
 # sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
