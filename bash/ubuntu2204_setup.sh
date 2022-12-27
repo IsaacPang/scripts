@@ -75,13 +75,21 @@ sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emula
 
 ## --------------------------------------------------
 ## oh-my-bash
-## ------------------------------------------------
+## --------------------------------------------------
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
-## ------------------------------------------------
+## --------------------------------------------------
+
+## --------------------------------------------------
+## ranger
+## --------------------------------------------------
+# refer to wiki https://wiki.archlinux.org/title/ranger
+sudo apt install ranger -y
+ranger --copy-config=all
+## --------------------------------------------------
 
 ## --------------------------------------------------
 ## chezmoi
-## ------------------------------------------------
+## --------------------------------------------------
 # binary install
 # sh -c "$(curl -fsLS get.chezmoi.io)" -- -b $HOME/.local/bin
 
