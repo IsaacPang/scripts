@@ -36,18 +36,37 @@ git config --global user.name "Isaac Pang"
 ## setup basic keyboard bindings
 ## --------------------------------------------------
 sudo apt install dconf-cli -y
+## --------------------------------------------------
 
-# add config to swap esc and caps
-# TODO: move to chezmoi
-echo "dconf write /org/gnome/desktop/input-sources/xkb-options \"['caps:swapescape']\"" >> ~/.bashrc
+## --------------------------------------------------
+## nvm
+## --------------------------------------------------
+# install package
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+echo "nvm installed"
+
+# install LTS versions and latest version of node
+nvm install --lts 12
+nvm install --lts 14
+nvm install --lts 
+nvm install node
+echo "node packages installed"
+
+# use the lts version
+nvm use --lts
+echo "Using node $(nvm current)"
 ## --------------------------------------------------
 
 ## --------------------------------------------------
 ## neovim
 ## --------------------------------------------------
+# neovim
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
 sudo apt update
 sudo apt install neovim python3-dev python3-pip -y
+
+# telescope
+sudo apt install ripgrep fd-find -y
 ## --------------------------------------------------
 
 ## --------------------------------------------------
@@ -85,6 +104,16 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
 # refer to wiki https://wiki.archlinux.org/title/ranger
 sudo apt install ranger -y
 ranger --copy-config=all
+## --------------------------------------------------
+
+## --------------------------------------------------
+## python packages
+## --------------------------------------------------
+# neovim
+pip install neovim
+
+# general coding
+pip install black isort Pillow
 ## --------------------------------------------------
 
 ## --------------------------------------------------
