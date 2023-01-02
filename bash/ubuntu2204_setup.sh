@@ -71,6 +71,10 @@ sudo apt install ripgrep fd-find -y
 # LSP config
 # installs for bash, ts, python
 sudo npm install -g bash-language-server pyright vscode-langservers-extracted typescript typescript-language-server
+
+# tree-sitter
+# install the incremental parser
+sudo npm install -g tree-sitter
 ## --------------------------------------------------
 
 ## --------------------------------------------------
