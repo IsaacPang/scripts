@@ -51,6 +51,14 @@ nvm install --lts 14
 nvm install --lts 
 nvm install node
 echo "node packages installed"
+echo "Choose default node version from below."
+
+nvm ls
+
+# TODO: need to check if the node version default is part of the installed packages
+# NODE_DEFAULT_OUTPUT=""
+# read -p "Choose default node version: " NODE_VERSION_DEFAULT
+# nvm alias default $NODE_VERSION_DEFAULT
 
 # use the lts version
 nvm use --lts
