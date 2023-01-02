@@ -67,6 +67,10 @@ sudo apt install neovim python3-dev python3-pip -y
 
 # telescope
 sudo apt install ripgrep fd-find -y
+
+# LSP config
+# installs for bash, ts, python
+sudo npm install -g bash-language-server pyright vscode-langservers-extracted typescript typescript-language-server
 ## --------------------------------------------------
 
 ## --------------------------------------------------
