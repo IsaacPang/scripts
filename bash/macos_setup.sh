@@ -41,6 +41,22 @@ curl -sSL https://install.python-poetry.org | python3 -
 
 # add to the path
 echo '# add local bin to path\nexport PATH="/Users/ispang/.local/bin:$PATH"' >> ~/.zshrc
+
+# add completions to zsh
+poetry completions zsh > ~/.zfunc/_poetry
+fpath+=~/.zfunc
+autoload -Uz compinit && compinit
+
+# adding to oh my zsh
+mkdir $ZSH_CUSTOM/plugins/poetry
+poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
+
+# add poetry to the plugin array in the ~/.zshrc
+# plugins = (
+#   ...
+#   poetry
+#   ...
+# )
 ## --------------------------------------------------
 
 ## --------------------------------------------------
