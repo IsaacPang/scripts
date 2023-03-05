@@ -16,6 +16,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## --------------------------------------------------
 
 ## --------------------------------------------------
+## install amethyst tiling window manager
+## --------------------------------------------------
+# amethyst must be given access to use the accessibility APIs
+brew install --cask amethyst
+## --------------------------------------------------
+
+## --------------------------------------------------
 ## install neovim
 ## --------------------------------------------------
 # latest version
