@@ -73,6 +73,11 @@ brew install pyenv
 
 # python environment building tools
 brew install openssl readline sqlite3 xz zlib tcl-tk
+
+# insert environment variables to zshrc
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ## --------------------------------------------------
 
 ## --------------------------------------------------
