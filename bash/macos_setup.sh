@@ -70,6 +70,9 @@ poetry completions zsh > $ZSH_CUSTOM/plugins/poetry/_poetry
 ## --------------------------------------------------
 brew update
 brew install pyenv
+
+# python environment building tools
+brew install openssl readline sqlite3 xz zlib tcl-tk
 ## --------------------------------------------------
 
 ## --------------------------------------------------
