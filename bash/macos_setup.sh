@@ -35,6 +35,22 @@ brew upgrade neovim --fetch-HEAD
 ## --------------------------------------------------
 
 ## --------------------------------------------------
+## install Microsoft ODBC 18
+## --------------------------------------------------
+# installation requires admin privileges
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+HOMEBREW_ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
+
+# If you installed this formula with the registration option (default), you'll
+# need to manually remove [ODBC Driver 18 for SQL Server] section from
+# odbcinst.ini after the formula is uninstalled. This can be done by executing
+# the following command:
+#     odbcinst -u -d -n "ODBC Driver 18 for SQL Server"
+## --------------------------------------------------
+
+## --------------------------------------------------
 ## check python installations
 ## --------------------------------------------------
 #install neovim dependencies
@@ -103,7 +119,8 @@ nvm install 12
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install chezmoi
+## install chezmoi and updaet
 ## --------------------------------------------------
 brew install chezmoi
 ## --------------------------------------------------
+
