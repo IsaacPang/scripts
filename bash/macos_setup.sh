@@ -16,10 +16,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install amethyst tiling window manager
+## install QOL programs
 ## --------------------------------------------------
 # amethyst must be given access to use the accessibility APIs
+# amethyst is a window tiling manager for macOS
 brew install --cask amethyst
+brew install tree
 ## --------------------------------------------------
 
 ## --------------------------------------------------
