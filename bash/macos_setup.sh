@@ -119,7 +119,14 @@ nvm install 12
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install chezmoi and updaet
+## install fuzzy finder
+## --------------------------------------------------
+brew install fzf
+
+# install useful key bindings and fuzzy completion
+$(brew --prefix)/opt/fzf/install
+## --------------------------------------------------
+## install chezmoi
 ## --------------------------------------------------
 brew install chezmoi
 ## --------------------------------------------------
