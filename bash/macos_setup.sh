@@ -16,10 +16,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install amethyst tiling window manager
+## install QOL programs
 ## --------------------------------------------------
 # amethyst must be given access to use the accessibility APIs
+# amethyst is a window tiling manager for macOS
 brew install --cask amethyst
+brew install tree
 ## --------------------------------------------------
 
 ## --------------------------------------------------
@@ -30,6 +32,22 @@ brew install --HEAD neovim
 
 # update neovim nightly
 brew upgrade neovim --fetch-HEAD
+## --------------------------------------------------
+
+## --------------------------------------------------
+## install Microsoft ODBC 18
+## --------------------------------------------------
+# installation requires admin privileges
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
+brew update
+HOMEBREW_ACCEPT_EULA=Y brew install msodbcsql18 mssql-tools18
+
+# If you installed this formula with the registration option (default), you'll
+# need to manually remove [ODBC Driver 18 for SQL Server] section from
+# odbcinst.ini after the formula is uninstalled. This can be done by executing
+# the following command:
+#     odbcinst -u -d -n "ODBC Driver 18 for SQL Server"
 ## --------------------------------------------------
 
 ## --------------------------------------------------
@@ -101,7 +119,15 @@ nvm install 12
 ## --------------------------------------------------
 
 ## --------------------------------------------------
+## install fuzzy finder
+## --------------------------------------------------
+brew install fzf
+
+# install useful key bindings and fuzzy completion
+$(brew --prefix)/opt/fzf/install
+## --------------------------------------------------
 ## install chezmoi
 ## --------------------------------------------------
 brew install chezmoi
 ## --------------------------------------------------
+
