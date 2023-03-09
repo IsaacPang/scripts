@@ -131,6 +131,12 @@ pip install neovim
 
 # general coding
 pip install black isort Pillow
+
+# pyenv
+curl https://pyenv.run | bash
+
+# poetry
+curl -sSL https://install.python-poetry.org | python3 -
 ## --------------------------------------------------
 
 ## --------------------------------------------------
