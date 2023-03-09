@@ -15,6 +15,7 @@ sudo apt upgrade -y
 ## --------------------------------------------------
 # common software properties
 sudo apt install software-properties-common -y
+sudo apt install cheese build-essential linux-headers-`uname -r`
 
 # curl
 sudo apt install curl -y
