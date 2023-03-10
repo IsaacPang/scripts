@@ -16,6 +16,27 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 ## --------------------------------------------------
 
 ## --------------------------------------------------
+## install nvm
+## --------------------------------------------------
+brew install nvm
+mkdir ~/.nvm
+echo "# nvm commands\nexport NVM_DIR=~/.nvm\nsource \$(brew --prefix nvm)/nvm.sh" >> .zshrc
+
+# install various nvm versions
+nvm install lts
+nvm install 18
+nvm install 16
+nvm install 12
+nvm use 18
+## --------------------------------------------------
+
+## --------------------------------------------------
+## install ranger
+## --------------------------------------------------
+brew install ranger
+## --------------------------------------------------
+
+## --------------------------------------------------
 ## install QOL programs
 ## --------------------------------------------------
 # amethyst must be given access to use the accessibility APIs
@@ -32,6 +53,13 @@ brew install --HEAD neovim
 
 # update neovim nightly
 brew upgrade neovim --fetch-HEAD
+## --------------------------------------------------
+
+## --------------------------------------------------
+## install language server providers
+## --------------------------------------------------
+# refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+npm i -g pyright typescript typescript-language-server
 ## --------------------------------------------------
 
 ## --------------------------------------------------
@@ -106,25 +134,14 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ## --------------------------------------------------
 
 ## --------------------------------------------------
-## install nvm
-## --------------------------------------------------
-brew install nvm
-mkdir ~/.nvm
-echo "# nvm commands\nexport NVM_DIR=~/.nvm\nsource \$(brew --prefix nvm)/nvm.sh" >> .zshrc
-
-# install various nvm versions
-nvm install 18
-nvm install 16
-nvm install 12
-## --------------------------------------------------
-
-## --------------------------------------------------
 ## install fuzzy finder
 ## --------------------------------------------------
 brew install fzf
 
 # install useful key bindings and fuzzy completion
 $(brew --prefix)/opt/fzf/install
+## --------------------------------------------------
+
 ## --------------------------------------------------
 ## install chezmoi
 ## --------------------------------------------------
