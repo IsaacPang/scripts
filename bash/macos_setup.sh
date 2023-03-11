@@ -59,7 +59,7 @@ brew upgrade neovim --fetch-HEAD
 ## install language server providers
 ## --------------------------------------------------
 # refer to https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
-npm i -g pyright typescript typescript-language-server
+npm i -g pyright typescript typescript-language-server bash-language-server
 ## --------------------------------------------------
 
 ## --------------------------------------------------
